@@ -17,25 +17,30 @@
 
 Дан список, в которой хранятся исследователи и топонимы (имена мест) где они бывали. Список имеет следующий формат:
 
+```javascript
     [  
         [<explorer1>, <toponym1>, <toponym2>, ...],  
         [<explorer2>, <toponym2>, <toponym3>, ...],  
         [<explorer3>, <toponym4>, <toponym1>, ...],  
         ...  
     ]
+```
 
 Надо развернуть этот список, таким образом, чтобы на первом месте оказался топоним, а на остальных исследователи.
 
 ### Формат ввода
 
+```javascript
     [  
         ["Mallory", "Everest", "Mont Blanc", "Pillar Rock"],  
         ["Mawson", "South Pole", "New Hebrides"],  
         ["Hillary", "Everest", "South Pole"]  
     ]
+```
 
 ### Формат вывода
 
+```javascript
     [  
         ["Everest", "Hillary", "Mallory"],  
         ["South Pole", "Hillary", "Mawson"],  
@@ -43,6 +48,7 @@
         ["Pillar Rock", "Mallory"],  
         ["New Hebrides", "Mawson"]  
     ]
+```
 
 <a name="meteosond">
 
@@ -60,19 +66,23 @@
 
 ### Формат ввода
 
+```javascript
     [  
         [1, 0],  
         [0, 1],  
         [1, 1]  
     ]
+```
 
 ### Формат вывода
 
+```javascript
     [  
         [-1, 0],  
         [0, -1],  
         [1, 1]  
     ]
+```
 
 <a name="secret">
 
@@ -86,6 +96,7 @@
 
 ### Формат ввода
 
+```javascript
     const data = [  
         {  
             geometry: [10, 20],  
@@ -101,6 +112,7 @@
         }  
     ];  
     const dictionary = [’James’, ’Bond’];
+```
 
 ### Формат вывода
 
@@ -110,10 +122,12 @@
 
 В файле task.js описан метод, который принимает на вход два аргумента - data и dictionary. В переменной data передается массив объектов вида:
 
+```javascript
     {  
         geometry: [number, number];  
         text: string;  
     }
+```
 
 В переменной dictionary передается массив строк - слова, которые мы умеем расшифровывать.
 
