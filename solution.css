@@ -1,0 +1,55 @@
+:root {
+    --color-black: #272727;
+    --size: 40px;
+}
+
+body {
+    color: var(--color-black);
+    font: 16px/1em arialregular;
+    margin: 0;
+    padding: 0;
+}
+
+.crossword {
+    background: var(--color-black);
+    border: 1px solid var(--color-black);
+    display: block;
+    box-sizing: border-box;
+}
+
+.crossword::after {clear: both;}
+.crossword.w-1, .space.w-1 {width: calc(var(--size) * 1);}
+.crossword.w-2, .space.w-2 {width: calc(var(--size) * 2);}
+.crossword.w-3, .space.w-3 {width: calc(var(--size) * 3);}
+.crossword.w-4, .space.w-4 {width: calc(var(--size) * 4);}
+.crossword.w-5, .space.w-5 {width: calc(var(--size) * 5);}
+.crossword.w-6, .space.w-6 {width: calc(var(--size) * 6);}
+.crossword.w-7, .space.w-7 {width: calc(var(--size) * 7);}
+.crossword.w-8, .space.w-8 {width: calc(var(--size) * 8);}
+
+.letter {
+    background: white;
+    border: 1px solid var(--color-black);
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    width: var(--size);
+    height: var(--size);
+    line-height: var(--size);
+    text-align: center;
+}
+
+.letter::after {
+    content: attr(number);
+    line-height: 1.3;
+    font-size: 75%;
+    position: absolute;
+    left: calc(var(--size) / 12);
+    top: 0;
+}
+
+.space {
+    float: left;
+    display: block;
+    height: var(--size);
+}
